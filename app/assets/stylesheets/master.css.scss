@@ -1,4 +1,28 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.navbar.navbar-default {
+  background: url('/assets/lgren051.jpg');
 
+  a.navbar-brand {
+    font-family: 'fira_sanssemibold_italic', sans-serif;
+    color: DarkGreen;
+    font-size: 40px;
+    font-weight: bold;
+
+  }
+
+  .nav.navbar {
+
+    .navbar-right {
+
+    }
+  }
+
+
+}   /* navbar.navbar-default */
+
+
+body {
+  background: url('/assets/asanoha-400px.png');
+}
