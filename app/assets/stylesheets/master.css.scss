@@ -1,27 +1,22 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-.navbar.navbar-default {
-  background: url('/assets/lgren051.jpg');
 
-  a.navbar-brand {
+/* - - - - -     NAVBAR     - - - - - */
+.navbar {
+  background: url('/assets/lgren051.jpg');
+  border-radius: 0;
+  box-shadow: 0px 1px 3px #2a2a2a;
+
+
+}   /* .navbar */
+
+.navbar-default a.navbar-brand {
     font-family: 'fira_sanssemibold_italic', sans-serif;
     color: DarkGreen;
     font-size: 40px;
     font-weight: bold;
-
-  }
-
-  .nav.navbar {
-
-    .navbar-right {
-
-    }
-  }
-
-
-}   /* navbar.navbar-default */
-
+}   /* .navbar-default a.navbar-brand */
 
 body {
   background: url('/assets/asanoha-400px.png');
