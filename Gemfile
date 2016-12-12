@@ -1,11 +1,24 @@
 source 'https://rubygems.org'
 
+# Gems added for Firehose Project: flixter
+
+# Heroku logs and page load times
+gem 'rails_12factor', group: :production
+
+# Bootstrap Twitter
+
+# Simple Form for modals for user data input
+
+# Devise for User Database and Authentication
+
+# Photo/Image and Amazon Web Services
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.9'
 # Use postgresql as the database for Active Record
 gem 'pg'
-# Use SCSS for stylesheets
+# Use SCSS for stylesheets. Commented out 12Dec2016
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
