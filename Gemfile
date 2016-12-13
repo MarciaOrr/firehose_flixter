@@ -12,7 +12,9 @@ gem 'sass-rails'
 
 # Simple Form for modals for user data input
 gem 'simple_form'
+
 # Devise for User Database and Authentication
+gem 'devise', '>=3.2.4'
 
 # Photo/Image and Amazon Web Services
 
