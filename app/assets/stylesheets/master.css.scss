@@ -66,9 +66,6 @@ login_text {
 }
 
 
-
-
-
 /* - - - - -     ROOT PAGE - views/static_pages/index.html.css     - - - - - */
 .hero {
   height: 350px;
@@ -94,7 +91,7 @@ login_text {
       font-family: 'fira_sansbook_italic', sans-serif;
       line-height: 50px;
     }
-    h2 {
+    h2{
       font-family: 'fira_sansbook', sans-serif;
     }
   }
@@ -103,6 +100,13 @@ login_text {
 .features {
   h3 {
     text-align: center;
+    font-family: 'fira_sansbook_italic', sans-serif;
+    margin-bottom: 8px;
+
+  }
+  p, ul, li {
+    font-family: 'fira_sansbook', sans-serif;
+    font-size: 16px;
   }
 }
 
@@ -110,6 +114,11 @@ login_text {
 
 
 /* - - - - -     GLOBAL Styles: classes & tags     - - - - - */
+.clear {
+  clear:both;
+}
+
+
 .btn {
   border-radius: 0;
 }
