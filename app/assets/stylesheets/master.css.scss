@@ -1,14 +1,26 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+/* - - - - - booyah-box     - - - - - */
+.booyah-box {
+  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;           /* 82% grey */
+  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  box-shadow: 1px 1px 2px 0 #d0d0d0;
+  background: #fff;                                 /* white */
+  border: 1px solid #ccc;                           /*  80% grey */
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;    /* greys: 89%, 74%, 74%, 89% */
+  padding: 10px;
+
+  h1, h2 {
+    margin: 10px;
+  }
+}
 
 /* - - - - -     NAVBAR     - - - - - */
 .navbar {
   background: url('/assets/lgren051.jpg');
   border-radius: 0;
   box-shadow: 0px 1px 3px #2a2a2a;
-
-
 }   /* .navbar */
 
 .navbar-default a.navbar-brand {
@@ -17,6 +29,44 @@
     font-size: 40px;
     font-weight: bold;
 }   /* .navbar-default a.navbar-brand */
+
+/* - - - - -     DEVISE: User Authentication     - - - - - */
+/* copied from nomster */
+login_text {
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 16px;
+}
+.email, .password {
+  color: #0000ff;
+  margin-top: 5px;
+}
+#user_email, #user_password {
+  color: black;
+}
+.login_text a {
+  color: #0000e6;
+}
+.hint {
+  color: black;
+  font-size: 14px;
+}
+
+/* --- Alerts and Errors --- */
+.alert-danger, .alert-info {
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.field_with_errors {
+  color: #ff3333;
+  background-color: #ffeeee;
+  border-radius: 3px;
+  padding: 8px;
+}
+
+
+
 
 
 /* - - - - -     ROOT PAGE - views/static_pages/index.html.css     - - - - - */
@@ -57,6 +107,9 @@
 }
 
 
+
+
+/* - - - - -     GLOBAL Styles: classes & tags     - - - - - */
 .btn {
   border-radius: 0;
 }
