@@ -18,6 +18,47 @@
     font-weight: bold;
 }   /* .navbar-default a.navbar-brand */
 
+
+/* - - - - -     ROOT PAGE - views/static_pages/index.html.css     - - - - - */
+.hero {
+  height: 350px;
+  background-image: url('/assets/hero.jpg');
+  background-repeat: no-repeat no-repeat;  /* round (first value) repeats image larger screens. Single image on smaller */
+  background-attachment: scroll;
+  background-size: 100% 350px;   /* width, height */
+  -webkit-background-size: 100% 350px;
+  -moz-background-size: 100% 350px;
+  -o-background-size: 100% 350px; 
+  background-position: center top;   /* horizontal, vertical */
+  box-shadow: 0px 3px 8px #003300;   /* very, very dark green */
+
+  .hero-text {
+    margin-top: 80px;
+    background: rgba(51,26,0, .5);   /* #331a00 - dark brown * 51,26,0, .5 */
+    color: #f3f3d8;   /* off-white. 90% from white */
+    text-align: center;
+    text-shadow: rgba(0,0,0, .95) 1px 2px;
+
+    h1 {
+      font-family: 'fira_sansbook_italic', sans-serif;
+      line-height: 50px;
+    }
+    h2 {
+      font-family: 'fira_sansbook', sans-serif;
+    }
+  }
+}   /* end class .hero */
+
+.btn {
+  border-radius: 0;
+}
+  
+
+h1, h2, h3, h4, h5, h6, .navbar {
+  margin: 0;
+}
+
+
 body {
   background: url('/assets/asanoha-400px.png');
 }
