@@ -11,7 +11,7 @@ gem 'sprockets', '2.11.0'
 gem 'sass-rails'
 
 # Simple Form for modals for user data input
-
+gem 'simple_form'
 # Devise for User Database and Authentication
 
 # Photo/Image and Amazon Web Services
