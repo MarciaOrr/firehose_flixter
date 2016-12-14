@@ -1,20 +1,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-/* - - - - - booyah-box     - - - - - */
-.booyah-box {
-  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;           /* 82% grey */
-  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
-  box-shadow: 1px 1px 2px 0 #d0d0d0;
-  background: #fff;                                 /* white */
-  border: 1px solid #ccc;                           /*  80% grey */
-  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;    /* greys: 89%, 74%, 74%, 89% */
-  padding: 10px;
 
-  h1, h2 {
-    margin: 10px;
-  }
-}
 
 /* - - - - -     NAVBAR     - - - - - */
 .navbar {
@@ -50,21 +37,6 @@ login_text {
   color: black;
   font-size: 14px;
 }
-
-/* --- Alerts and Errors --- */
-.alert-danger, .alert-info {
-  font-family: 'Helvetica Neue', Helvetica, sans-serif;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.field_with_errors {
-  color: #ff3333;
-  background-color: #ffeeee;
-  border-radius: 3px;
-  padding: 8px;
-}
-
 
 /* - - - - -     ROOT PAGE - views/static_pages/index.html.css     - - - - - */
 .hero {
@@ -111,23 +83,47 @@ login_text {
 }
 
 
-
-
 /* - - - - -     GLOBAL Styles: classes & tags     - - - - - */
+/* - - - - - booyah-box     - - - - - */
+.booyah-box {
+  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;           /* 82% grey */
+  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  box-shadow: 1px 1px 2px 0 #d0d0d0;
+  background: #fff;                                 /* white */
+  border: 1px solid #ccc;                           /*  80% grey */
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;    /* greys: 89%, 74%, 74%, 89% */
+  padding: 10px;
+
+  h1, h2 {
+    margin: 10px;
+  }
+}
+
+.alert-danger, .alert-info {
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.field_with_errors {
+  color: #ff3333;
+  background-color: #ffeeee;
+  border-radius: 3px;
+  padding: 8px;
+  margin: 10px
+}
+
 .clear {
   clear:both;
 }
-
 
 .btn {
   border-radius: 0;
 }
   
-
 h1, h2, h3, h4, h5, h6, .navbar {
   margin: 0;
 }
-
 
 body {
   background: url('/assets/asanoha-400px.png');
