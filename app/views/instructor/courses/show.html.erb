@@ -9,7 +9,8 @@
   </div>
 
   <ul>
-   <% @course.sections.each do |section| %>
+    <% @sections_sorted = @course.sections.order('title ASC') %>
+    <% @sections_sorted.each_with_index do |section, section_index| %>
       <li><%= section.title %></li>
     <% end %>
   </ul>
