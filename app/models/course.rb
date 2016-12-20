@@ -8,4 +8,6 @@ class Course < ActiveRecord::Base
 
   validates :cost, presence: true,
                    numericality: {greater_than_or_equal_to: 0}
+
+  mount_uploader :image, ImageUploader
 end

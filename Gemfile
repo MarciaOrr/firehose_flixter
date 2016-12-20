@@ -18,6 +18,8 @@ gem 'devise', '>=3.2.4'
 
 # Photo/Image and Amazon Web Services
 gem 'carrierwave', '>= 1.0.0.rc', '< 2.0'
+gem 'figaro', '>= 1.0.0'
+gem 'fog'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.9'
