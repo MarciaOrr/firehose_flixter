@@ -1,6 +1,13 @@
 <div class='booyah-box col-xs-12 col-xs-offset-1 col-sm-10 col-sm-offset-1'>
   <h1><%= current_course.title %></h1>
   <br />
+  <div class='instructor_course_description col-xs-8'>
+    <p><%= safe_join(current_course.description.split("\r\n"), "<br />".html_safe) %></p>
+  </div>
+  <div class'instructor_course_image col-xs-4'>
+    <img src='<%= current_course.image %>' class='img-responsive' alt='Responsive image' style='width: 260px'>
+  </div>
+
   <%= link_to 'Preview as Student...', course_path(current_course), class: 'btn btn-warning pull-right' %>
   <br class='clear' />
 
@@ -9,6 +16,8 @@
     <br />
     <br class='clear' />
   </div>
+
+
 
   <ul>
     <% current_course.sections.order('title ASC').each do |section| %>
@@ -27,7 +36,6 @@
     <% end %>
   </ul>
 
-  <p><%= safe_join(current_course.description.split("\r\n"), "<br />".html_safe) %>
-  </p>
+
 
 </div>

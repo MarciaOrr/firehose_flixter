@@ -7,6 +7,7 @@
       <%= safe_join(course.description.split("\r\n"), "<br />".html_safe) %>
     </div>
     <div class='col-sm-4 col-xs-12 text-center'>
+      <img src='<%= course.image %>' class='img-responsive' alt='Responsive image' style='width: 260px'>
       <%= link_to 'More Details > >', course_path(course), class: 'btn btn-primary btn-large' %>
     </div>
     <div class='clear'></div>
