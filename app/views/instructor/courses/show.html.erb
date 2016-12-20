@@ -11,14 +11,12 @@
   </div>
 
   <ul>
-    <% @sections_sorted = current_course.sections.order('title ASC') %>
-    <% @sections_sorted.each_with_index do |section, section_index| %>
+    <% current_course.sections.order('title ASC').each do |section| %>
       <li>
         <%= section.title %>
         <%= link_to "New Lesson", new_instructor_section_lesson_path(section), class: 'pull-right btn btn-primary btn-xs' %>
         <ul>
-          <% @lessons_sorted = section.lessons.order('title ASC') %>
-          <% @lessons_sorted.each_with_index do |lesson, lesson_index| %>
+          <% section.lessons.order('title ASC').each do |lesson| %>
             <li>
               <b><%= lesson.title %></b> - 
               <%= lesson.subtitle %>
