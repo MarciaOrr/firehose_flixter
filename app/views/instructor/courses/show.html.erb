@@ -17,7 +17,9 @@
     <br class='clear' />
   </div>
 
-
+  <div class='add_image'>
+    <%= link_to 'Edit', edit_instructor_course_path(current_course), class: 'btn btn-primary' %>
+  </div>
 
   <ul>
     <% current_course.sections.order('title ASC').each do |section| %>

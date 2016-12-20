@@ -18,6 +18,16 @@ class Instructor::CoursesController < ApplicationController
   def show
   end
 
+  # temporary to add the photo after record created
+  def edit
+  end
+  def update
+    current_course.update_attributes(course_params)
+    if current_course.valid?
+      redirect_to root_path
+    end
+  end
+
   private
   def require_authorized_for_current_course
     if current_course.user != current_user

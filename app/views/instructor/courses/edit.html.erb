@@ -1,0 +1,8 @@
+<div class='booyah-box col-xs-12 col-xs-offset-1 col-sm-10 col-sm-offset-1'>
+  <h1><%= current_course.title %></h1>
+  <h2>Edit Course</h2>
+  <%= simple_form_for current_course, url: instructor_course_path do |f| %>
+    <%= f.input :image %>
+    <%= f.submit 'Update', class: 'btn btn-primary' %>
+  <% end %>
+</div>
