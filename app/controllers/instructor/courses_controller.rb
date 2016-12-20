@@ -27,6 +27,7 @@ class Instructor::CoursesController < ApplicationController
       redirect_to root_path
     end
   end
+  # end temporary
 
   private
   def require_authorized_for_current_course
