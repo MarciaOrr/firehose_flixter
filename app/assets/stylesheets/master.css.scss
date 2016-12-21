@@ -82,6 +82,77 @@ login_text {
   }
 }
 
+/* - - - - -     Courses Details Page views/courses/show.html.erb     - - - - - */
+.course-image-summary {
+  border: 3px solid pink;
+}
+
+.course-description {
+  border: 3px solid purple;
+}
+
+.course-breakout {
+  border: 5px solid DarkGreen;
+
+  .course-section {
+    border: 1px solid;
+    border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;   /* grey. 89, 74, 74, 89% */ 
+    margin: 10px 0 10px 0;
+    font-family: 'fira_sansmedium_italic', sans-serif;
+  }   /* end course-section */
+
+  .course-lesson {
+    background-color: black;
+    margin: 10px 0;
+    height: 130px;
+
+    a {
+      padding: 0px 5px;
+      color: white;
+      font-family: 'firasans_regular', sans-serif;
+      font-weight: 100;
+      font-size: 16px;
+      b { font-size: 24px; }
+    }
+  }   /* end course-lesson */
+
+}   /* end course-breakout */
+
+
+/*
+    font-family: 'fira_sansbold';
+    font-family: 'fira_sansbold_italic';
+    font-family: 'fira_sansbook';
+    font-family: 'fira_sansbook_italic';
+    font-family: 'fira_sanseight';
+    font-family: 'fira_sanseight_italic';
+    font-family: 'fira_sansextrabold';
+    font-family: 'fira_sansextrabold_italic';
+    font-family: 'fira_sansextralight';
+    font-family: 'fira_sansextralight_italic';
+    font-family: 'fira_sansfour';
+    font-family: 'fira_sansfour_italic';
+    font-family: 'fira_sanshair';
+    font-family: 'fira_sanshair_italic';
+    font-family: 'fira_sansheavy';
+    font-family: 'fira_sansheavy_italic';
+    font-family: 'fira_sansitalic';
+    font-family: 'fira_sanslight';
+    font-family: 'fira_sanslight_italic';
+    font-family: 'fira_sansmedium';
+    font-family: 'fira_sansmedium_italic';
+    font-family: 'fira_sansregular';
+    font-family: 'fira_sanssemibold';
+    font-family: 'fira_sanssemibold_italic';
+    font-family: 'fira_sansthin';
+    font-family: 'fira_sansthin_italic';
+    font-family: 'fira_sanstwo';
+    font-family: 'fira_sanstwo_italic';
+    font-family: 'fira_sansultra';
+    font-family: 'fira_sansultra_italic';
+    font-family: 'fira_sansultralight';
+    font-family: 'fira_sansultralight_italic';
+*/
 
 /* - - - - -     GLOBAL Styles: classes & tags     - - - - - */
 /* - - - - - booyah-box     - - - - - */
