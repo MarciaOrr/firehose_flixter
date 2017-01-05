@@ -6,6 +6,7 @@ class LessonsController < ApplicationController
   end
 
   private
+  
   def require_enrolled_for_current_lesson
     alert_message = "WARNING. You may not view " << current_lesson.title << ". You are not enrolled in the course!"
     if !current_user.enrolled_in?(current_lesson.section.course)
