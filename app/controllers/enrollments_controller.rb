@@ -3,13 +3,11 @@ class EnrollmentsController < ApplicationController
 
   def create
     if current_course.premium?
-      # Stripe - tuition amount, create customer & charge, rescue exception
       @amount = (current_course.cost * 100).to_i
-    
       customer = Stripe::Customer.create(
        :email => current_user.email,
        :card => params[:stripeToken]
-     )
+      )
       charge = Stripe::Charge.create(
         :customer => customer.id,
         :amount => @amount,

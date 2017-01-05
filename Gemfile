@@ -28,6 +28,9 @@ gem 'carrierwave-aws'
 # Strip for Credit Card Purchase of a Course
 gem 'stripe'
 
+# Dynamic re-ordering of Courses
+gem 'ranked-model'
+
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

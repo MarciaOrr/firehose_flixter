@@ -31,7 +31,6 @@
     <% end %>
   </div>
 
-
   <div class='course-description col-sm-8 col-xs-12'>DIV: course_description<br />
     <%= safe_join(@course.description.split("\r\n"), "<br />".html_safe) %>
   </div>
@@ -39,11 +38,9 @@
   <div class='course-breakout col-xs-12'>
     <% @course.sections.order('title ASC').each do |section| %>
     <br /><br />
-
       <div class='course-section col-xs-12'>
         <h3><%= section.title %></h3>
-        <% section.lessons.order('title ASC').each do |lesson| %>
-
+        <% section.lessons.rank(:row_order).each do |lesson| %>
           <div class='col-xs-12 col-sm-6'>
             <div class='course-lesson text-center'>
               <br />
@@ -54,12 +51,10 @@
               <% end %>   <!-- link end -->
             </div>   <!-- course_lesson -->
           </div>
-
-        <% end %>   <!-- Lessons each loop -->
+        <% end %>   <!-- end section.lessons.rank -->
         <br class='clear' />
       </div>   <!-- course_section -->
-
     <% end %>  <!-- Sections each loop -->
-  </div>
+  </div> <!-- course-breakout -->
 
 </div>
