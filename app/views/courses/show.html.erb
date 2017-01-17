@@ -36,7 +36,7 @@
   </div>
 
   <div class='course-breakout col-xs-12'>
-    <% @course.sections.order('title ASC').each do |section| %>
+    <% @course.sections.rank(:row_order).each do |section| %>
     <br /><br />
       <div class='course-section col-xs-12'>
         <h3><%= section.title %></h3>
