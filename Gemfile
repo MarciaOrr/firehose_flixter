@@ -31,6 +31,9 @@ gem 'stripe'
 # Dynamic re-ordering of Courses
 gem 'ranked-model'
 
+# jQuery UI - Drag and Drop Lessons
+gem 'jquery-ui-rails'
+
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
