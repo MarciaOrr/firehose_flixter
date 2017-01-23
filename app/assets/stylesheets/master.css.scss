@@ -92,32 +92,88 @@ login_text {
 }
 
 .course-breakout {
-  border: 5px solid DarkGreen;
+  padding-top: 10px;
 
   .course-section {
+    background-color: #fff2e6;
     border: 1px solid;
-    border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;   /* grey. 89, 74, 74, 89% */ 
+    border-color: #ffad66 #ffbb80 #ffbb80 #ffad66;   /* grey. 89, 74, 74, 89% */ 
     margin: 10px 0 10px 0;
+    padding: 8px;
     font-family: 'fira_sansmedium_italic', sans-serif;
+
+    .course-section-header {
+      font-size: 24px;
+    }
+
+    .glyphicon-option-vertical {
+      color: #663500;   /* 20% brown */
+      font-size: 20px;
+    }
   }   /* end course-section */
 
-  .course-lesson {
-    background-color: black;
+  .course-lesson, .lessons li {
+    background-color: #663300;  /* 20% brown */
     margin: 10px 0;
-    height: 130px;
+    padding: 5px;
 
+    color: white;
+    font-family: 'firasans_regular', sans-serif;
+    font-size: 16px;
+
+    b { font-size: 20px; }
+
+    /* a required for student lessons - change link from blue to white */
     a {
-      padding: 0px 5px;
       color: white;
-      font-family: 'firasans_regular', sans-serif;
-      font-weight: 100;
-      font-size: 16px;
-      b { font-size: 24px; }
+    }
+
+    .glyphicon-option-vertical {
+      color: #ffcc99;   /* light brown */
     }
   }   /* end course-lesson */
 
+  .lessons li {
+    margin-right: 8.3%;
+    margin-right: 10.0%;
+  }
 }   /* end course-breakout */
 
+
+/* - - - - -     INSTRUCTOR Courses Details Page views/courses/show.html.erb     - - - - - */
+/*
+.lessons li {
+  background: #663300;
+  color: white;
+  margin: 10px;
+  padding: 8px;
+  font-size: 16px;
+
+  b { font-size: 20px; }
+
+  .glyphicon.glyphicon-option-vertical {
+    color: yellow;
+    font-size: 12px;
+  }
+}
+*/
+
+/* THIS WORKS FOR INSTRUCTOR LESSONS
+<ul class='lessons'>
+              <% section.lessons.rank(:row_order).each do |lesson| %>
+                <li data-update-url="<%= instructor_lesson_path(lesson) %>" class='course-lesson'>
+                   <div class='col-xs-1'>
+                   <span class='glyphicon glyphicon-option-vertical'></span>
+                 </div>
+                  <div class='col-xs-11'>
+                   <p><b><%= lesson.title %></b></p>
+                   <p><%= lesson.subtitle %></p>
+                 </div>
+                 <br class='clear' />
+               </li>
+             <% end %>
+            </ul>
+*/            
 
 /*
     font-family: 'fira_sansbold';
@@ -194,6 +250,10 @@ login_text {
 
 h1, h2, h3, h4, h5, h6, .navbar {
   margin: 0;
+}
+
+ul {
+  list-style-type: none;
 }
 
 body {
