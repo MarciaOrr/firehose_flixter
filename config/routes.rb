@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   root 'static_pages#index'
 
+  resource :dashboard, only: [:show]
+
   # student routes
   resources :courses, only: [:index, :show] do
     resources :enrollments, only: :create

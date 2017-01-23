@@ -139,6 +139,14 @@ login_text {
   }
 }   /* end course-breakout */
 
+/* - - - - -     USER DASHBOARD: enrolled and instructing courses     - - - - - */
+
+
+
+
+
+
+
 
 /* - - - - -     INSTRUCTOR Courses Details Page views/courses/show.html.erb     - - - - - */
 /*
@@ -254,6 +262,13 @@ h1, h2, h3, h4, h5, h6, .navbar {
 
 ul {
   list-style-type: none;
+}
+
+hr {
+  color: brown;
+  background-color: brown;
+  height: 3px;
+  margin-top: 5px;
 }
 
 body {
