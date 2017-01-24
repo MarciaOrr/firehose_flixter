@@ -1,7 +1,7 @@
 <div class='booyah-box col-xs-12 col-xs-offset-0 col-sm-10 col-sm-offset-1'>
   <h1><%= @course.title %></h1>
 
-  <div class='course-image-summary col-sm-4 col-xs-12 text-center'>DIV: course_image_summary
+  <div class='course-image-summary col-sm-4 col-xs-12 text-center'>
     <img src='<%= @course.image %>' class='img-responsive' alt='Responsive image' style='width: 260px'>
     <span class='label label-default'>
       Cost: <%= number_to_currency @course.cost %>
@@ -31,7 +31,7 @@
     <% end %>
   </div>
 
-  <div class='course-description col-sm-8 col-xs-12'>DIV: course_description<br />
+  <div class='course-description col-sm-8 col-xs-12'>
     <%= safe_join(@course.description.split("\r\n"), "<br />".html_safe) %>
   </div>
 

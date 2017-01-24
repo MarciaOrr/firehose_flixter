@@ -17,6 +17,11 @@
     font-weight: bold;
 }   /* .navbar-default a.navbar-brand */
 
+.navbar-default .navbar-nav > li > a {
+  color: rgb(128,128,128);
+  font-family: 'fira_sansmedium', sans-serif;
+}
+
 /* - - - - -     DEVISE: User Authentication     - - - - - */
 /* copied from nomster */
 login_text {
@@ -77,9 +82,16 @@ login_text {
 
   }
   p, ul, li {
+    text-align: justify;
     font-family: 'fira_sansbook', sans-serif;
     font-size: 16px;
   }
+
+  li {
+    list-style-type: square;
+    margin: 5px 0;
+  }
+
 }
 
 /* - - - - -     Courses Details Page views/courses/show.html.erb     - - - - - */
@@ -95,9 +107,9 @@ login_text {
   padding-top: 10px;
 
   .course-section {
-    background-color: #fff2e6;
+    background-color: #f2f2f2;
     border: 1px solid;
-    border-color: #ffad66 #ffbb80 #ffbb80 #ffad66;   /* grey. 89, 74, 74, 89% */ 
+    border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;   /* light greys */
     margin: 10px 0 10px 0;
     padding: 8px;
     font-family: 'fira_sansmedium_italic', sans-serif;
@@ -107,13 +119,13 @@ login_text {
     }
 
     .glyphicon-option-vertical {
-      color: #663500;   /* 20% brown */
+      color: #333333;
       font-size: 20px;
     }
   }   /* end course-section */
 
   .course-lesson, .lessons li {
-    background-color: #663300;  /* 20% brown */
+    background-color: #404040;  /* darker grey */
     margin: 10px 0;
     padding: 5px;
 
@@ -129,7 +141,7 @@ login_text {
     }
 
     .glyphicon-option-vertical {
-      color: #ffcc99;   /* light brown */
+      color: #cccccc; 
     }
   }   /* end course-lesson */
 
@@ -152,77 +164,6 @@ login_text {
 .new-lesson-button {
 
 }
-
-
-
-/*
-.lessons li {
-  background: #663300;
-  color: white;
-  margin: 10px;
-  padding: 8px;
-  font-size: 16px;
-
-  b { font-size: 20px; }
-
-  .glyphicon.glyphicon-option-vertical {
-    color: yellow;
-    font-size: 12px;
-  }
-}
-*/
-
-/* THIS WORKS FOR INSTRUCTOR LESSONS
-<ul class='lessons'>
-              <% section.lessons.rank(:row_order).each do |lesson| %>
-                <li data-update-url="<%= instructor_lesson_path(lesson) %>" class='course-lesson'>
-                   <div class='col-xs-1'>
-                   <span class='glyphicon glyphicon-option-vertical'></span>
-                 </div>
-                  <div class='col-xs-11'>
-                   <p><b><%= lesson.title %></b></p>
-                   <p><%= lesson.subtitle %></p>
-                 </div>
-                 <br class='clear' />
-               </li>
-             <% end %>
-            </ul>
-*/            
-
-/*
-    font-family: 'fira_sansbold';
-    font-family: 'fira_sansbold_italic';
-    font-family: 'fira_sansbook';
-    font-family: 'fira_sansbook_italic';
-    font-family: 'fira_sanseight';
-    font-family: 'fira_sanseight_italic';
-    font-family: 'fira_sansextrabold';
-    font-family: 'fira_sansextrabold_italic';
-    font-family: 'fira_sansextralight';
-    font-family: 'fira_sansextralight_italic';
-    font-family: 'fira_sansfour';
-    font-family: 'fira_sansfour_italic';
-    font-family: 'fira_sanshair';
-    font-family: 'fira_sanshair_italic';
-    font-family: 'fira_sansheavy';
-    font-family: 'fira_sansheavy_italic';
-    font-family: 'fira_sansitalic';
-    font-family: 'fira_sanslight';
-    font-family: 'fira_sanslight_italic';
-    font-family: 'fira_sansmedium';
-    font-family: 'fira_sansmedium_italic';
-    font-family: 'fira_sansregular';
-    font-family: 'fira_sanssemibold';
-    font-family: 'fira_sanssemibold_italic';
-    font-family: 'fira_sansthin';
-    font-family: 'fira_sansthin_italic';
-    font-family: 'fira_sanstwo';
-    font-family: 'fira_sanstwo_italic';
-    font-family: 'fira_sansultra';
-    font-family: 'fira_sansultra_italic';
-    font-family: 'fira_sansultralight';
-    font-family: 'fira_sansultralight_italic';
-*/
 
 /* - - - - -     GLOBAL Styles: classes & tags     - - - - - */
 /* - - - - - booyah-box     - - - - - */
@@ -266,19 +207,59 @@ h1, h2, h3, h4, h5, h6, .navbar {
   margin: 0;
 }
 
+h1, h2 {
+  font-family: 'fira_sansmedium_italic', sans-serif;
+}
+
 ul {
   list-style-type: none;
 }
 
 hr {
-  color: brown;
-  background-color: brown;
+  color: #737373;
+  background-color: #737373;
   height: 3px;
   margin-top: 5px;
 }
 
 body {
   background: url('/assets/asanoha-400px.png');
-  font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, 
-               "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+  /* font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, 
+               "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif; */
+  font-family: 'fira_sansregular', non-serif;
 }
+
+/*
+    font-family: 'fira_sansbold';
+    font-family: 'fira_sansbold_italic';
+    font-family: 'fira_sansbook';
+    font-family: 'fira_sansbook_italic';
+    font-family: 'fira_sanseight';
+    font-family: 'fira_sanseight_italic';
+    font-family: 'fira_sansextrabold';
+    font-family: 'fira_sansextrabold_italic';
+    font-family: 'fira_sansextralight';
+    font-family: 'fira_sansextralight_italic';
+    font-family: 'fira_sansfour';
+    font-family: 'fira_sansfour_italic';
+    font-family: 'fira_sanshair';
+    font-family: 'fira_sanshair_italic';
+    font-family: 'fira_sansheavy';
+    font-family: 'fira_sansheavy_italic';
+    font-family: 'fira_sansitalic';
+    font-family: 'fira_sanslight';
+    font-family: 'fira_sanslight_italic';
+    font-family: 'fira_sansmedium';
+    font-family: 'fira_sansmedium_italic';
+    font-family: 'fira_sansregular';
+    font-family: 'fira_sanssemibold';
+    font-family: 'fira_sanssemibold_italic';
+    font-family: 'fira_sansthin';
+    font-family: 'fira_sansthin_italic';
+    font-family: 'fira_sanstwo';
+    font-family: 'fira_sanstwo_italic';
+    font-family: 'fira_sansultra';
+    font-family: 'fira_sansultra_italic';
+    font-family: 'fira_sansultralight';
+    font-family: 'fira_sansultralight_italic';
+*/

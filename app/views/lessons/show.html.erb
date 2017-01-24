@@ -4,19 +4,33 @@
   <h1><%= current_lesson.title %></h1>
   <h2><%= current_lesson.subtitle %></h2>
 
-  <video id="MY_VIDEO_1" class="video-js vjs-default-skin vjs-big-play-centered vjs-fluid"
-      controls preload="auto" width="100%" height="100%"
-      poster='/assets/black.jpg'
-      data-setup="{}">
-    <source src="<%= current_lesson.video.to_s %>" type='video/mp4'/>
+  <% if current_lesson.next_lesson.present? %>
+    <%= link_to lesson_path(current_lesson.next_lesson), class: 'btn btn-default pull-right' do %>
+      Next Lesson &nbsp;
+      <span class='glyphicon glyphicon-forward'></span>
+    <% end %>
+  <% else %>
+    <h3>There is no next lesson</h3>
+  <% end %>
+  <br /> <br />
 
-    <noscript>
-      <p class="vjs-no-js">
-        To view this video please enable JavaScript, and consider upgrading to a web browser that
-        <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-      </p>
-    </noscript>
-  </video>
+  <% if current_lesson.video.present? %>
+    <video id="MY_VIDEO_1" class="video-js vjs-default-skin vjs-big-play-centered vjs-fluid"
+       controls preload="auto" width="100%" height="100%"
+        poster='/assets/black.jpg'
+        data-setup="{}">
+      <source src="<%= current_lesson.video.to_s %>" type='video/mp4'/>
+
+      <noscript>
+       <p class="vjs-no-js">
+         To view this video please enable JavaScript, and consider upgrading to a web browser that
+         <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+        </p>
+      </noscript>
+    </video>
+  <% else %>
+    <h3>This lesson does not have an associated video</h3>
+  <% end %>
 
 </div>
 

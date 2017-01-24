@@ -46,12 +46,12 @@ $(document).ready(function() {
     <img src='<%= current_course.image %>' class='img-responsive' alt='Responsive image' style='width: 260px'>
   </div>
 
-  <%= link_to 'Preview as Student...', course_path(current_course), class: 'btn btn-warning pull-right' %>
+  <%= link_to 'Preview as Student', course_path(current_course), class: 'btn btn-warning pull-right' %>
   <br class='clear' />
 
 
   <div class='text-center'>
-    <button class='btn btn-primary btn-lg' data-toggle='modal' data-target='#newSectionModal'>
+    <button class='btn btn-primary btn-lg' data-toggle='modal' data-target='#newSectionModal' style='font-family: fira_sansmedium_italic'>
      Add New Section
    </button>
   </div>
