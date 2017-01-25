@@ -14,7 +14,7 @@
 <body>
 
 <div id = 'wrap'>
-<nav class="navbar navbar-default" role = "navigation">
+<nav class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -45,6 +45,10 @@
         <% end %>
       </ul>
     </div>   <!-- /.navbar-collapse -->
+    <div class='navbar-blurb'>
+      Centers for Spiritual Living Online Education is dedicated to providing connection through high quality virtual education, 
+      grounded in Science of Mind Principles and Practices.
+    </div>
   </div>   <!-- /.container-fluid -->
 </nav>
 
@@ -65,19 +69,43 @@
 
 <div id='footer'>
   <div class='container'>
-    <div class='col-sm-3'>Teachers
-      <ul><%= link_to 'Teach a Course', new_instructor_course_path %></ul>
-      <ul><%= link_to 'View Dashboard', '#' %></ul>
-    </div>
-    <div class='col-sm-3'>About
-      <ul><%= link_to 'CSL Online Courses', '#' %></ul>
-    </div>  
-    <div class='col-sm-3'>Contact
-      <ul><%= link_to 'The Firehose Project', '#' %></ul>
-    </div>
-    <div class='col-sm-3'>Social
-      <ul><%= link_to 'Facebook', '#' %></ul>
-      <ul><%= link_to 'Twitter', '#' %></ul>
+    <div class=col-xs-12>
+      <div class='col-sm-3 text-center'>
+        <b>Teachers</b>
+        <br />
+        <%= link_to 'Create Course', new_instructor_course_path %>
+        <br />
+        <%= link_to 'View Dashboard', dashboard_path %>
+      </div>
+      <div class='col-sm-3 social'>
+        <b>Centers for Spiritual Living</b>
+        <br />
+        <a href='http://csl.org/onlineclasses/'>csl.org/onlineclasses</a>
+        <br />
+        Golden CO 80401       
+      <br />
+      </div>  
+      <div class='col-sm-3 text-center'>
+        <b>The Firehose Project</b>
+        <br />
+        <a href='http://thefirehoseproject.com'>Learn to Code</a>
+        <br />
+        Cambridge MA, 02113
+      </div>
+      <div class='col-sm-3 social'>
+        <b>Social</b>
+        <br />
+        <%= link_to 'http://github.com/marciaorr' do %>
+          <%= image_tag 'github.png', class: 'social-button' %>
+        <% end %>
+        <%= link_to 'https://www.linkedin.com/in/marcia-orr-a9774610' do %>
+          <%= image_tag 'linkedin.png', class: 'social-button' %>
+        <% end %>
+        <%= link_to 'https://medium.com/@orrmar20620' do %>
+          <%= image_tag 'medium.png', class: 'social-button' %>
+        <% end %>          
+      </div>
+      <br /><br />
     </div>
   </div>
 </div>
