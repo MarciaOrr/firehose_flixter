@@ -2,6 +2,9 @@ class Lesson < ActiveRecord::Base
   belongs_to :section
   mount_uploader :video, VideoUploader
 
+  validates :title, presence: true,
+                    length: { maximum: 60, minimum:3 }
+
   include RankedModel
   ranks :row_order, :with_same => :section_id
 

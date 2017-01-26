@@ -215,6 +215,18 @@ login_text {
   border-radius: 0;
 }
 
+.modal {
+  position: fixed;
+  top: 15%;
+
+  .modal-title {
+    color: #2e6da4;
+    font-family: 'fira_sansmedium_italic', sans-serif;
+    font-size: 24px;
+    text-align: center;
+  }
+}
+
 h1, h2, h3, h4, h5, h6, .navbar {
   margin: 0;
 }
@@ -228,10 +240,10 @@ ul {
 }
 
 hr {
-  color: #737373;
-  background-color: #737373;
+  color: #404040;
+  background-color: #404040;
   height: 3px;
-  margin-top: 5px;
+  margin: 5px 0;
 }
 
 body {

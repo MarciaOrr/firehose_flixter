@@ -5,9 +5,8 @@ $(document).ready(function() {
     var lessonUrl = $(event.target).data('lesson-url');
     alert('New Lesson Button clicked: ' + lessonUrl);
     $('#newLessonForm').attr('action',lessonUrl);
+    $('#newLessonModalLabel').html( 'ADD LESSON to Section: ' + $(event.target).data('section-title') );
   });
-
-
 
   $('.sections').sortable({
     update: function( event, ui ) {
@@ -28,7 +27,7 @@ $(document).ready(function() {
         type: 'PUT',
         url: ui.item.data('update-url'),
         dataType: 'json',
-        data: { lesson: { row_order_position: ui.item.index() } }
+        data: { lesson: { row_order_position: ui.item.index() } } 
       });
     }
   });
@@ -66,6 +65,7 @@ $(document).ready(function() {
             <button class='btn btn-primary btn-lg pull-right new-lesson-button'
               data-toggle='modal'
               data-target='#newLessonModal'
+              data-section-title="<%= section.title %>"
               data-lesson-url="<%= instructor_section_lessons_path(section) %>">
               Add New Lesson
             </button>            
@@ -124,7 +124,7 @@ $(document).ready(function() {
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="newLessonModalLabel">Add Lesson</h4>
+        <h4 class="modal-title" id="newLessonModalLabel"></h4>
       </div>
       <%= simple_form_for @lesson, url: '#', html: {id: 'newLessonForm'} do |f| %>
         <div class="modal-body">
