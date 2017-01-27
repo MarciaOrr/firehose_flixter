@@ -157,24 +157,20 @@ login_text {
   }
 }   /* end course-breakout */
 
-/* - - - - -     USER DASHBOARD: enrolled and instructing courses     - - - - - */
 
 
-
-
-
-
-
-
-/* - - - - -     INSTRUCTOR Courses Details Page views/courses/show.html.erb     - - - - - */
-.new-lesson-button {
-
-}
-
+/* - - - - -     Privacy Page views/static_pages/privacy.html.erb     - - - - - */
 .privacy {
   margin-top: 20px;
   font-size: 16px;
   border: 3px solid DarkGreen; 
+}
+
+/* - - - - -     Student Lessons Page views/lessons/show.html.erb     - - - - - */
+.video-box {
+  margin: 10px 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 /* - - - - -     GLOBAL Styles: classes & tags     - - - - - */
@@ -253,37 +249,3 @@ body {
   font-family: 'fira_sansregular', non-serif;
 }
 
-/*
-    font-family: 'fira_sansbold';
-    font-family: 'fira_sansbold_italic';
-    font-family: 'fira_sansbook';
-    font-family: 'fira_sansbook_italic';
-    font-family: 'fira_sanseight';
-    font-family: 'fira_sanseight_italic';
-    font-family: 'fira_sansextrabold';
-    font-family: 'fira_sansextrabold_italic';
-    font-family: 'fira_sansextralight';
-    font-family: 'fira_sansextralight_italic';
-    font-family: 'fira_sansfour';
-    font-family: 'fira_sansfour_italic';
-    font-family: 'fira_sanshair';
-    font-family: 'fira_sanshair_italic';
-    font-family: 'fira_sansheavy';
-    font-family: 'fira_sansheavy_italic';
-    font-family: 'fira_sansitalic';
-    font-family: 'fira_sanslight';
-    font-family: 'fira_sanslight_italic';
-    font-family: 'fira_sansmedium';
-    font-family: 'fira_sansmedium_italic';
-    font-family: 'fira_sansregular';
-    font-family: 'fira_sanssemibold';
-    font-family: 'fira_sanssemibold_italic';
-    font-family: 'fira_sansthin';
-    font-family: 'fira_sansthin_italic';
-    font-family: 'fira_sanstwo';
-    font-family: 'fira_sanstwo_italic';
-    font-family: 'fira_sansultra';
-    font-family: 'fira_sansultra_italic';
-    font-family: 'fira_sansultralight';
-    font-family: 'fira_sansultralight_italic';
-*/

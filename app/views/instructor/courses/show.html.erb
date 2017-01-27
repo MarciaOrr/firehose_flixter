@@ -3,14 +3,12 @@ $(document).ready(function() {
 
   $('.new-lesson-button').click(function( event) {
     var lessonUrl = $(event.target).data('lesson-url');
-    alert('New Lesson Button clicked: ' + lessonUrl);
     $('#newLessonForm').attr('action',lessonUrl);
     $('#newLessonModalLabel').html( 'ADD LESSON to Section: ' + $(event.target).data('section-title') );
   });
 
   $('.sections').sortable({
     update: function( event, ui ) {
-      alert('sections ' + ui.item.data('update-url'));
       $.ajax({
         type: 'PUT',
         url: ui.item.data('update-url'),
