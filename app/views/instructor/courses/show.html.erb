@@ -20,7 +20,6 @@ $(document).ready(function() {
 
   $('.lessons').sortable({
     update: function( event, ui ) {
-      alert('lessons ' + ui.item.data('update-url'));
       $.ajax({
         type: 'PUT',
         url: ui.item.data('update-url'),
@@ -39,16 +38,17 @@ $(document).ready(function() {
   <div class='instructor_course_description col-xs-8'>
     <p><%= safe_join(current_course.description.split("\r\n"), "<br />".html_safe) %></p>
   </div>
-  <div class='instructor_course_image col-xs-4'>
+  <div class='instructor_course_image col-xs-4 text-center'>
     <img src='<%= current_course.image %>' class='img-responsive' alt='Responsive image' style='width: 260px'>
+     <%= link_to 'Preview as Student', course_path(current_course), class: 'btn btn-flixter btn-preview' %>
   </div>
 
-  <%= link_to 'Preview as Student', course_path(current_course), class: 'btn btn-warning pull-right' %>
+ 
   <br class='clear' />
 
 
   <div class='text-center'>
-    <button class='btn btn-primary btn-lg' data-toggle='modal' data-target='#newSectionModal' style='font-family: fira_sansmedium_italic'>
+    <button class='btn btn-flixter btn-add' data-toggle='modal' data-target='#newSectionModal'>
      Add New Section
    </button>
   </div>
@@ -60,7 +60,7 @@ $(document).ready(function() {
           <div class='course-section-header'>
             <span class='glyphicon glyphicon-option-vertical'></span>
             <%= section.title %>
-            <button class='btn btn-primary btn-lg pull-right new-lesson-button'
+            <button class='btn btn-flixter btn-add pull-right new-lesson-button'
               data-toggle='modal'
               data-target='#newLessonModal'
               data-section-title="<%= section.title %>"
@@ -109,7 +109,7 @@ $(document).ready(function() {
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <%= f.submit "Add Section", class: 'btn btn-primary' %>
+          <%= f.submit "Add Section", class: 'btn btn-flixter btn-add' %>
         </div>
       <% end %>
     </div>
@@ -132,7 +132,7 @@ $(document).ready(function() {
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <%= f.submit "Add Lesson", class: 'btn btn-primary' %>
+          <%= f.submit "Add Lesson", class: 'btn btn-flixter btn-add' %>
         </div>
       <% end %>
     </div>

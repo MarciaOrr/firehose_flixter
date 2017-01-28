@@ -3,15 +3,21 @@
 
   <div class='course-image-summary col-sm-4 col-xs-12 text-center'>
     <img src='<%= @course.image %>' class='img-responsive' alt='Responsive image' style='width: 260px'>
-    <span class='label label-default'>
-      Cost: <%= number_to_currency @course.cost %>
-    </span>
-    <br /><br />
+
+
+    <% if @course.cost == 0 %>
+      <span class='course-cost label label-default pull-left'>Cost: FREE!</span>
+    <% else %>
+      <span class='course-cost label label-default pull-left'>Cost: <%= number_to_currency @course.cost %></span>
+    <% end %>
+
     <% if current_user && current_user.enrolled_in?(@course) %>
-      <h3 class='label label-default'>You are Enrolled!</h3>
+      <span class='course-enroll label label-default pull-right'>You are Enrolled!</span>
+      <br />
     <% else %>
       <% if @course.free? %>
-        <%= link_to 'Enroll', course_enrollments_path(@course), class: 'btn btn-primary', method: :post %>
+        <%= link_to 'Enroll', course_enrollments_path(@course), class: 'btn btn-flixter btn-enroll', method: :post %>
+        <br />
       <% else %>
         <%= form_tag course_enrollments_path(@course) do %>
           <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
@@ -25,9 +31,11 @@
     <% end %>   <!-- end if user enrolled -->
 
 
+
+
     <% if current_user && current_user == @course.user %>
-      <br /><br />
-      <%= link_to 'Instructor Admin', instructor_course_path(@course), class: 'btn btn-danger btn-large' %>
+      <br />
+      <%= link_to 'Instructor Admin', instructor_course_path(@course), class: 'btn btn-flixter btn-instructor btn-large pull-left' %>
     <% end %>
   </div>
 

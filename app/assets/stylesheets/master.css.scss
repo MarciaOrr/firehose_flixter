@@ -102,11 +102,26 @@ login_text {
 
 /* - - - - -     Courses Details Page views/courses/show.html.erb     - - - - - */
 .course-image-summary {
-  border: 3px solid pink;
+  .label {
+    height: 30px;   /* same as .flixter-btn */
+    color: black;
+    font-size: 16px;
+    font-weight: 100;
+    border: 1px solid #737373;
+    padding-top: .35em;  /* centers in middle vertically. use default for other padding */
+    vertical-align: middle;
+  }
+
+  .course-cost.label {
+    background-color: rgba(0,153,51,0.2);
+  }
+  .course-enroll.label {
+    background-color: rgba(191,191,191,0.4);
+  }
 }
 
 .course-description {
-  border: 3px solid purple;
+  
 }
 
 .course-breakout {
@@ -207,9 +222,60 @@ login_text {
   clear:both;
 }
 
+/* - - - - - Custom Buttons (.btn)     - - - - - */
 .btn {
   border-radius: 0;
 }
+
+.btn:hover, .btn:focus, .btn.focus {
+  color: #ffffb3;   /* yellow. default was black */
+}
+
+.btn-flixter {
+  box-sizing: border-box;
+  border-radius: 4px;
+  border-color: black;
+  padding: 0 12px;
+  height: 30px;
+  *background-color: #1275ff; /* Stripe Blue */
+  font-family: "fira_sansmedium",sans-serif;;
+  font-size: 16px;
+  text-align: middle;
+  /* vertical-align: center; */
+  line-height: 30px;
+  text-shadow: 0 -1px 0, rgba(0,0,0,0.25);
+}
+
+.btn-hero {
+  color: white;
+  background-color: #00cc00;
+}
+
+.btn-enroll {
+  color: white;
+  background-color: green;
+}
+
+.btn-instructor {
+  color: white;
+  background-color: red;
+}
+
+.btn-add {
+  color: white;
+  background-color: #2e6da4;
+}
+
+.btn-preview {
+  color: white;
+  background-color: #ff8000; 
+}
+
+.btn-next {
+  color: white;
+  background-color: #595959;
+}
+
 
 .modal {
   position: fixed;
@@ -229,6 +295,10 @@ h1, h2, h3, h4, h5, h6, .navbar {
 
 h1, h2 {
   font-family: 'fira_sansmedium_italic', sans-serif;
+}
+
+h3 {
+  font-size: 18px;
 }
 
 ul {
